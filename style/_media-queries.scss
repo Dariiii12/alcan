@@ -1,0 +1,82 @@
+/* Creat by acropolis */
+$landscape: 'and (orientation: landscape)';
+$portrait: 'and (orientation: portrait)';
+$screen: 'screen and';
+
+$mobile-s: #{$screen} #{'(min-width: 0) and (max-width: 320px)'};
+$mobile-s-landscape: #{$mobile-s} #{$landscape};
+$mobile-s-portrait: #{$mobile-s} #{$portrait};
+
+$mobile-m: #{$screen} #{'(min-width: 321px) and (max-width: 375px)'};
+$mobile-m-landscape: #{$mobile-m} #{$landscape};
+$mobile-m-portrait: #{$mobile-m} #{$portrait};
+
+$mobile-m-and-down: #{$screen} #{'(max-width: 375px)'};
+$mobile-m-and-down-landscape: #{$mobile-m-and-down} #{$landscape};
+$mobile-m-and-down-portrait: #{$mobile-m-and-down} #{$portrait};
+
+$mobile-m-and-more: #{$screen} #{'(min-width: 321px)'};
+$mobile-m-and-more-landscape: #{$mobile-m-and-more} #{$landscape};
+$mobile-m-and-more-portrait: #{$mobile-m-and-more} #{$portrait};
+
+$mobile-l: #{$screen} #{'(min-width: 376px) and (max-width: 425px)'};
+$mobile-l-landscape: #{$mobile-l} #{$landscape};
+$mobile-l-portrait: #{$mobile-l} #{$portrait};
+
+$mobile-l-and-down: #{$screen} #{'(max-width: 425px)'};
+$mobile-l-and-down-landscape: #{$mobile-l-and-down} #{$landscape};
+$mobile-l-and-down-portrait: #{$mobile-l-and-down} #{$portrait};
+
+$mobile-l-and-more: #{$screen} #{'(min-width: 376px)'};
+$mobile-l-and-more-landscape: #{$mobile-l-and-more} #{$landscape};
+$mobile-l-and-more-portrait: #{$mobile-l-and-more} #{$portrait};
+
+$tablet: #{$screen} #{'(min-width: 426px) and (max-width: 768px)'};
+$tablet-landscape: #{$tablet} #{$landscape};
+$tablet-portrait: #{$tablet} #{$portrait};
+
+$tablet-and-down: #{$screen} #{'(max-width: 768px)'};
+$tablet-and-down-landscape: #{$tablet-and-down} #{$landscape};
+$tablet-and-down-portrait: #{$tablet-and-down} #{$portrait};
+
+$tablet-and-more: #{$screen} #{'(min-width: 426px)'};
+$tablet-and-more-landscape: #{$tablet-and-more} #{$landscape};
+$tablet-and-more-portrait: #{$tablet-and-more} #{$portrait};
+
+$laptop: #{$screen} #{'(min-width: 769px) and (max-width: 1024px)'};
+$laptop-landscape: #{$laptop} #{$landscape};
+$laptop-portrait: #{$laptop} #{$portrait};
+
+$laptop-and-more: #{$screen} #{'(min-width: 769px)'};
+$laptop-and-more-landscape: #{$laptop-and-more} #{$landscape};
+$laptop-and-more-portrait: #{$laptop-and-more} #{$portrait};
+
+$laptop-and-down: #{$screen} #{'(max-width: 1024px)'};
+$laptop-and-down-landscape: #{$laptop-and-down} #{$landscape};
+$laptop-and-down-portrait: #{$laptop-and-down} #{$portrait};
+
+$laptop-l: #{$screen} #{'(min-width: 1025px) and (max-width: 1440px)'};
+$laptop-l-landscape: #{$laptop-l} #{$landscape};
+$laptop-l-portrait: #{$laptop-l} #{$portrait};
+
+$laptop-l-and-more: #{$screen} #{'(min-width: 1025px)'};
+$laptop-l-and-more-landscape: #{$laptop-l-and-more} #{$landscape};
+$laptop-l-and-more-portrait: #{$laptop-l-and-more} #{$portrait};
+
+$laptop-l-and-down: #{$screen} #{'(max-width: 1440px)'};
+$laptop-l-and-down-landscape: #{$laptop-l-and-down} #{$landscape};
+$laptop-l-and-down-portrait: #{$laptop-l-and-down} #{$portrait};
+
+$ultra-hd: #{$screen} #{'(min-width: 1441px)'};
+$ultra-hd-landscape: #{$laptop-l} #{$landscape};
+$ultra-hd-portrait: #{$laptop-l} #{$portrait};
+
+$ultra-hd-and-down: #{$screen} #{'(max-width: 1440px)'};
+$ultra-hd-and-down-landscape: #{$laptop-l-and-down} #{$landscape};
+$ultra-hd-and-down-portrait: #{$laptop-l-and-down} #{$portrait};
+
+@mixin media($width) {
+  @media #{$width} {
+    @content;
+  }
+}
